@@ -16,7 +16,7 @@ class EmailAddressParser
   
    def parse 
      @@parsed_email_adresses.flatten
-     #binding.pry 
+     binding.pry 
    end 
   
 end 
