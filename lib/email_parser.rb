@@ -15,8 +15,9 @@ class EmailAddressParser
    end 
   
    def parse 
-     @@parsed_email_adresses.flatten
-     binding.pry 
+     @@parsed_email_adresses.flatten.each do |email|
+       email.split(/[,\s]+/)
+     end 
    end 
   
 end 
