@@ -5,18 +5,16 @@
 require 'pry'
 
 class EmailAddressParser 
-  attr_accessor :email_address, :parse 
+  attr_accessor :parsed_email_address, :parse 
   
-  @@parsed_email_adresses = [] 
   
    def initialize(email_address)
-     @email_address = email_address
-     @@parsed_email_adresses = parsed_email_adresses
+     @parsed_email_adresses = parsed_email_adresses
    end 
   
    def parse 
        parsed_email_adresses.flatten.uniq.each do |email|
-       email.split(/[,\s]+/)
+        email.split(/[,\s]+/)
      end 
    end 
   
