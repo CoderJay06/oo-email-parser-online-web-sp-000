@@ -11,11 +11,11 @@ class EmailAddressParser
   
    def initialize(email_address)
      @email_address = email_address
-     @@parsed_email_adresses << email_address.gsub(/\s+/, "").split(",")
+     @@parsed_email_adresses = parsed_email_adresses
    end 
   
    def parse 
-     @@parsed_email_adresses.flatten.uniq.each do |email|
+       parsed_email_adresses.flatten.uniq.each do |email|
        email.split(/[,\s]+/)
      end 
    end 
