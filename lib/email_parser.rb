@@ -8,15 +8,15 @@ class EmailAddressParser
   attr_accessor :email_addresses, :parse 
   
   
-   def initialize(email_adresses)
-     @email_addresses = email_adresses
+   def initialize(email_addresses)
+     @email_addresses = email_addresses
    end 
   
    def parse 
-     email_adresses.split.collect do |email|
+     email_addresses.split.collect do |email|
        email.split(/[,\s]+/)
      end 
-     email_adresses.flatten.uniq 
+     email_addresses.flatten.uniq 
    end 
   
 end 
